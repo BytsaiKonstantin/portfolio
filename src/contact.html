@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html',{ "title":"Portfolio" })
+  <body>
+    @@include('html/header.html',{})
+    <main class="main">
+      <section class="contact">
+        <form action="" class="contact__form contact-form">
+          <legend class="contact-form__title">Contact me</legend>
+          <label for="name" class="contact-form__label">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="contact-form__input"
+            placeholder="Type your name"
+          />
+          <label for="email" class="contact-form__label">Email</label>
+          <input
+            type="text"
+            id="mail"
+            name="mail"
+            class="contact-form__input"
+            placeholder="Type your email"
+          />
+          <label for="comment" class="contact-form__label">Email</label>
+          <textarea
+            id="comment"
+            name="mail"
+            class="contact-form__textarea"
+            placeholder="Ask your question"
+          ></textarea>
+          <input
+            type="submit"
+            value="Submit"
+            class="button contact-form__button"
+          />
+        </form>
+      </section>
+    </main>
+    @@include('html/footer.html',{})
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
