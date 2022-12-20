@@ -34,5 +34,5 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.Actions }}
           BRANCH: gh-pages
-          FOLDER: Dist
+          FOLDER: dist
           CLEAN: true
