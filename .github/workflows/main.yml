@@ -5,15 +5,15 @@ name: Project test & build
 # в данном случае это push и pull_request, в ветку master
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 # выполняемые действия
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     # запускаются по шагам
     # name - название шага
     # в github actions будет выводиться название шага, и процессы
@@ -28,6 +28,9 @@ jobs:
 
       - name: Build 👷
         run: npm run build
+
+      - name: SVG
+        run: npm run createSvgSprite
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
