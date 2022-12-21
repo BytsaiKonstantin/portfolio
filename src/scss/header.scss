@@ -2,7 +2,7 @@
   border: none;
   width: 30px;
   height: 30px;
-  background-color: #ffffff;
+  background-color: transparent;
   &__inner:before,
   &__inner:after,
   &__inner span {
@@ -29,14 +29,16 @@
 
 .header {
   &__navigation {
-    right: 0px;
+    right: -100vw;
     width: 70vw;
+    height: 100vh;
     background-color: #ffffff;
     z-index: 1;
+    top: 0;
     position: absolute;
-    display: none;
+    transition: right 0.7s;
     &_active {
-      display: block;
+      right: 0;
     }
   }
   &__burger {
