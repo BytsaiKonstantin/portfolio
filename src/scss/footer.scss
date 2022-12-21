@@ -1,0 +1,30 @@
+.footer {
+  &__copyright {
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.socials {
+  padding: 0px;
+  margin: 0 auto;
+  width: 240px;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__item {
+    list-style: none;
+  }
+  &__link {
+    &:hover,
+    &:focus,
+    &:active {
+      img {
+        transition: width 0.4s, height 0.4s;
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
