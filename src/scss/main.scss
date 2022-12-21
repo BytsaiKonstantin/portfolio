@@ -1,0 +1,15 @@
+body {
+  font-family: "Heebo";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #21243d;
+}
+
+.container {
+  width: calc(100vw - 46px);
+  margin: 0 auto;
+  @media screen and (min-width: 900px) {
+    width: 856px;
+  }
+}

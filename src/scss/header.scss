@@ -1,12 +1,50 @@
-body {
-  font-family: "Heebo";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #21243d;
+.burger {
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  &__inner:before,
+  &__inner:after,
+  &__inner span {
+    background: #21243d;
+    content: "";
+    display: block;
+    height: 2px;
+    border-radius: 3px;
+    margin: 3px 0;
+    transition: 0.5s;
+  }
+  &_active {
+    .burger__inner:before {
+      transform: translateY(5px) rotate(135deg);
+    }
+    .burger__inner:after {
+      transform: translateY(-5px) rotate(-135deg);
+    }
+    .burger__inner span {
+      transform: scale(0);
+    }
+  }
 }
 
 .header {
+  &__navigation {
+    right: 0px;
+    width: 70vw;
+    background-color: #ffffff;
+    z-index: 1;
+    position: absolute;
+    display: none;
+    &_active {
+      display: block;
+    }
+  }
+  &__burger {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    z-index: 2;
+  }
 }
 
 .navigation {
