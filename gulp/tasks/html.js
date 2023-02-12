@@ -30,11 +30,6 @@ export const html = () => {
           app.isBuild,
           versionNumber({
             value: "%DT%",
-            append: {
-              key: "_v",
-              cover: 0,
-              to: ["css", "js"],
-            },
             output: {
               file: "gulp/version.json",
             },
