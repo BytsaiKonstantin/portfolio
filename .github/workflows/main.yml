@@ -22,16 +22,16 @@ jobs:
         uses: actions/checkout@v2.3.4
         with:
           persist-credentials: false
-
+      # Установка зависимостей
       - name: Install 🔧
         run: npm install
-
+      #Основная сборка без СВГ
       - name: Build 👷
         run: npm run build
-
+      #Сборка СВГ спрайта
       - name: SVG
         run: npm run createSvgSprite
-
+      #Пуш собранного проекта в ветку gh-pages
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
