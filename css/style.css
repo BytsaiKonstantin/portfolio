@@ -346,6 +346,7 @@ body {
 }
 
 .navigation__list {
+  padding-left: 0;
   list-style: none;
 }
 
@@ -358,6 +359,9 @@ body {
 .navigation__link {
   text-decoration: none;
   color: inherit;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .navigation__link_active,
@@ -365,6 +369,20 @@ body {
 .navigation__link:active,
 .navigation__link:focus {
   color: #ff6464;
+}
+
+.main__greeting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin-top: 83px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .title {
@@ -387,6 +405,7 @@ body {
 .button:hover,
 .button:focus,
 .button:active {
+  outline: none;
   color: #ff6464;
   background: #ffffff;
   border: 2px solid #ff6464;
@@ -400,6 +419,7 @@ body {
   font-size: 32px;
   line-height: 40px;
   text-align: center;
+  margin-bottom: 22px;
 }
 
 .greeting__image {
@@ -409,6 +429,16 @@ body {
      object-fit: cover;
   width: 50vw;
   height: auto;
+}
+
+.greeting__description {
+  text-align: center;
+  margin: 0px 0px 27px 0px;
+}
+
+.greeting__button {
+  margin: 0 auto;
+  display: block;
 }
 
 .section-title {
@@ -547,13 +577,63 @@ body {
     width: 856px;
   }
 
+  .burger {
+    display: none;
+  }
+
+  .header__navigation {
+    position: initial;
+    right: initial;
+    width: auto;
+    height: initial;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0px 60px;
+  }
+
+  .navigation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 33px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .main__greeting {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 70px;
+  }
+
   .greeting__title {
     font-size: 44px;
     line-height: 60px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .greeting__description {
+    margin-bottom: 40px;
+    text-align: left;
   }
 
   .greeting__image {
     width: 243px;
+  }
+
+  .greeting__content {
+    width: 500px;
+  }
+
+  .greeting__button {
+    margin: 0px;
   }
 
   .post__title {
