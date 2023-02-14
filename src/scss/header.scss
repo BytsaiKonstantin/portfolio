@@ -25,6 +25,9 @@
       transform: scale(0);
     }
   }
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
 }
 
 .header {
@@ -40,6 +43,14 @@
     &_active {
       right: 0;
     }
+    @media screen and (min-width: 900px) {
+      position: initial;
+      right: initial;
+      width: auto;
+      height: initial;
+      box-sizing: border-box;
+      padding: 0px 60px;
+    }
   }
   &__burger {
     position: absolute;
@@ -51,7 +62,13 @@
 
 .navigation {
   &__list {
+    padding-left: 0;
     list-style: none;
+    @media screen and (min-width: 900px) {
+      display: flex;
+      gap: 33px;
+      justify-content: flex-end;
+    }
   }
 
   &__item {
@@ -63,6 +80,7 @@
   &__link {
     text-decoration: none;
     color: inherit;
+    transition: all 0.5s;
     &_active,
     &:hover,
     &:active,

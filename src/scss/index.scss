@@ -1,3 +1,19 @@
+.main {
+  &__greeting {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 83px;
+    align-items: center;
+  }
+  @media screen and (min-width: 900px) {
+    &__greeting {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 70px;
+    }
+  }
+}
+
 .title {
   font-weight: 700;
   font-size: 44px;
@@ -16,6 +32,7 @@
   &:hover,
   &:focus,
   &:active {
+    outline: none;
     color: #ff6464;
     background: #ffffff;
     border: 2px solid #ff6464;
@@ -29,6 +46,7 @@
     font-size: 32px;
     line-height: 40px;
     text-align: center;
+    margin-bottom: 22px;
   }
 
   &__image {
@@ -39,14 +57,39 @@
     height: auto;
   }
 
+  &__description {
+    text-align: center;
+    margin: 0px 0px 27px 0px;
+  }
+
+  &__button {
+    margin: 0 auto;
+    display: block;
+  }
+
   @media screen and (min-width: 900px) {
     &__title {
       font-size: 44px;
       line-height: 60px;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    &__description {
+      margin-bottom: 40px;
+      text-align: left;
     }
 
     &__image {
       width: 243px;
+    }
+
+    &__content {
+      width: 500px;
+    }
+
+    &__button {
+      margin: 0px;
     }
   }
 }
