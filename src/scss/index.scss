@@ -4,6 +4,7 @@
     flex-direction: column-reverse;
     margin-top: 83px;
     align-items: center;
+    margin-bottom: 59px;
   }
   @media screen and (min-width: 900px) {
     &__greeting {
@@ -97,10 +98,12 @@
 .section-title {
   font-weight: 400;
   font-size: 22px;
-  line-height: 60px;
+  line-height: 32px;
 }
 
 .posts {
+  box-sizing: border-box;
+  padding: 20px 0px;
   &__link {
     font-size: 16px;
     line-height: 24px;
@@ -114,18 +117,35 @@
       transition: color 0.7s;
     }
   }
-}
-
-.posts {
+  &__list {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
   background-color: #edf7fa;
   &__item {
     list-style: none;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 900px) {
+    &__list {
+      flex-direction: row;
+      gap: 20px;
+    }
   }
 }
 
 .post {
   background-color: #ffffff;
   box-shadow: 0px 4px 10px rgba(187, 225, 250, 0.25);
+  box-sizing: border-box;
+  padding: 23px;
   &__link {
     color: #21243d;
     text-decoration: none;
@@ -133,6 +153,7 @@
   &__title {
     font-size: 24px;
     line-height: 30px;
+    margin: 0px 0px 17px 0px;
   }
 
   &__date {
